@@ -91,7 +91,7 @@ render(){
         value={this.state.formData}
         onChange={(formValue) => this.onChangeFormRegister(formValue)}
       />
-      <Button title="Join" onPress={() => this.register()}
+      <Button title="Sign up" onPress={() => this.register()}
               buttonStyle={styles.btnJoinContainer} 
       />
       <Text style={styles.formErrorMessage}>{ formErrorMessage }</Text>
