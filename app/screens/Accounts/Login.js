@@ -115,7 +115,12 @@ render(){
           onChange={(formValue) => this.onChangeFormLogin(formValue)}
         />
         <Button title='Login' onPress={() => this.login()}
-                buttonStyle={styles.buttonLoginContainer} />
+                buttonStyle={styles.buttonLoginContainer} 
+          />
+
+        <Text style={styles.textRegister}>
+          Not Registered Yet? <Text style={styles.btnRegister} onPress={() => this.props.navigation.navigate('Register')}>Sign Up</Text>
+        </Text>
 
         <Text style={styles.loginErrorMessage}>{ loginErrorMessage }</Text>
 
@@ -143,8 +148,8 @@ render(){
 const styles = StyleSheet.create({
   viewBody: {
     flex: 1,
-    marginLeft: 40,
-    marginRight: 40,
+    marginLeft: 30,
+    marginRight: 30,
     marginTop: 40
   },
   logo: {
@@ -166,11 +171,21 @@ const styles = StyleSheet.create({
   loginErrorMessage: {
     color: 'red',
     textAlign: 'center',
-    marginTop: 10
+    marginTop: 10,
+    marginBottom: 10
 
   },
   divider: {
       backgroundColor: '#00a680',
       marginBottom: 20
+  },
+  textRegister: {
+    marginTop: 15,
+    marginLeft: 10,
+    marginRight: 10
+  },
+  btnRegister: {
+      color: '#00a680',
+      fontWeight: 'bold'
   }
 });

@@ -5,6 +5,9 @@ import { Button } from 'react-native-elements'
 //lib firebase
 import * as firebase from 'firebase'
 
+//components
+import AccountGuest from '../../components/myAccount/myAccountGuest'
+
 export default class MyAccount extends Component {
 
   constructor(){
@@ -51,11 +54,7 @@ render(){
     )
   } else{
     return (
-      <View style={styles.viewBody}>
-        <Text>MyAccount</Text>
-        <Button title="Register" onPress={() => this.goToScreen('Register')} />
-        <Button title="Login" onPress={() => this.goToScreen('Login')} />
-      </View>
+      <AccountGuest goToScreen={this.goToScreen} />
       )
     }
   }

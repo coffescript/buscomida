@@ -2,8 +2,9 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 21876,
+  "packagerPid": 14825,
   "expoServerNgrokUrl": "https://96-sxr.anonymous.buscomida.exp.direct",
   "packagerNgrokUrl": "https://packager.96-sxr.anonymous.buscomida.exp.direct",
-  "ngrokPid": 22042
+  "ngrokPid": 15250,
+  "webpackServerPort": null
 }
