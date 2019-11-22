@@ -6,7 +6,7 @@ export default function Home() {
     <View style={styles.viewBody}>
       <Text>Home</Text>
     </View>
-  );
+  )
 }
 const styles = StyleSheet.create({
   viewBody: {
@@ -15,4 +15,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center"
   }
-});
+})

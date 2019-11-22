@@ -5,10 +5,15 @@ import { createAppContainer } from 'react-navigation'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
 import { createStackNavigator } from 'react-navigation-stack'
 
-import HomeScreen from '../screens/Home';
+//screens
+import HomeScreen from '../screens/Home'
 import TopFiveScreen from '../screens/TopFive'
 import SearchScreen from '../screens/Search'
-import MyAccountScreen from '../screens/MyAccount'
+
+
+//Screens My Account
+import MyAccountScreen from '../screens/Accounts/MyAccount'
+import RegisterScreen from '../screens/Accounts/Register'
 
 const homeScreenStack = createStackNavigator({
   Home: {
@@ -42,6 +47,12 @@ const myAccountScreenStack = createStackNavigator({
     screen: MyAccountScreen,
     navigationOptions: ({ navigation }) => ({
       title: 'My Account'
+    })
+  },
+  Register: {
+    screen: RegisterScreen,
+    navigationOptions: ({ navigation }) => ({
+      title: 'Register'
     })
   }
 })

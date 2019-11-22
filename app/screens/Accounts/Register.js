@@ -1,13 +1,15 @@
-import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { Component } from "react"
+import { StyleSheet, Text, View } from 'react-native'
 
-export default function MyAccount() {
+export default function RegisterScreen() {
   return (
     <View style={styles.viewBody}>
-      <Text>MyAccount</Text>
+      <Text>Register Screen</Text>
+      
     </View>
-  );
+  )
 }
+
 const styles = StyleSheet.create({
   viewBody: {
     flex: 1,
