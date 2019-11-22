@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, ActivityIndicator } from 'react-native'
-import { Button, Image, Text } from 'react-native-elements'
+import { Button, Image, Text, SocialIcon, Divider } from 'react-native-elements'
 
 //lib firebase
 import * as firebase from 'firebase'
+
+//configuration facebook app
+import { FacebookAPI } from '../../utils/FacebookLogin'
+import * as Facebook from 'expo-facebook'
 
 //lib toast
 import Toast, { DURATION } from 'react-native-easy-toast'
@@ -55,6 +59,31 @@ login = () => {
     }
 }
 
+loginFacebook = async () => {
+    console.log('Login Facebook....')
+    const { type, token } = await Facebook.logInWithReadPermissionsAsync(
+            FacebookAPI.application_id,
+            {permissions: FacebookAPI.permissions }
+        )
+
+    if(type == 'success'){
+        const credentials = firebase.auth.FacebookAuthProvider.credential(token)
+        firebase.auth().signInWithCredential(credentials)
+            .then( () => {
+                this.refs.toastLogin.show('Login Successfully', 100, () => {
+                    this.props.navigation.goBack()
+                })
+            })
+            .catch(err => {
+                this.refs.toastLogin.show('Error Sign In with Facebook, try again later', 300)
+            })
+    } else if(type == 'cancel') {
+        this.refs.toastLogin.show('Sign In Cancelled', 300)
+    } else {
+        this.refs.toastLogin.show('Error Unknown, try again later', 300)
+    }
+}
+
 onChangeFormLogin = (formValue) => {
     console.log('change')
     this.setState({
@@ -69,13 +98,13 @@ render(){
 
   return (
     <View style={styles.viewBody}>
-      <Image
+      {/*<Image
         source={require('../../../assets/buscomida_logo.png')}
         style={styles.logo}
         containerStyle={styles.containerLogo}
         PlaceholderContent={<ActivityIndicator />}
         resizeMode='contain'
-      />
+      />*/}
       
       <View style={styles.viewForm}>
         <Form 
@@ -89,6 +118,13 @@ render(){
                 buttonStyle={styles.buttonLoginContainer} />
 
         <Text style={styles.loginErrorMessage}>{ loginErrorMessage }</Text>
+
+        <Divider style={styles.divider} />
+
+        <SocialIcon 
+          title="Sign In With Facebook" 
+          button type="facebook"
+          onPress={() => this.loginFacebook()} />
       </View>
 
       <Toast 
@@ -132,5 +168,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 10
 
+  },
+  divider: {
+      backgroundColor: '#00a680',
+      marginBottom: 20
   }
 });
