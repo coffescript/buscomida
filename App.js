@@ -3,10 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 
 //lib firebase
 import * as firebase from 'firebase'
-
-//config firebase
-import firebaseConfig from './app/utils/Firebase'
-firebase.initializeApp(firebaseConfig)
+import { firebaseApp } from './app/utils/Firebase'
 
 import UserNavigation from './app/navigations/User'
 

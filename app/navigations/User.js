@@ -6,22 +6,50 @@ import { createBottomTabNavigator } from 'react-navigation-tabs'
 import { createStackNavigator } from 'react-navigation-stack'
 
 //screens
-import HomeScreen from '../screens/Home'
 import TopFiveScreen from '../screens/TopFive'
 import SearchScreen from '../screens/Search'
-
 
 //Screens My Account
 import MyAccountScreen from '../screens/Accounts/MyAccount'
 import RegisterScreen from '../screens/Accounts/Register'
 import LoginScreen from '../screens/Accounts/Login'
 
-const homeScreenStack = createStackNavigator({
-  Home: {
-    screen: HomeScreen,
+//Screens Home
+import RestaurantsScreen from '../screens/Restaurants/Restaurants'
+import AddNewRestaurantsScreen from '../screens/Restaurants/AddNewRestaurants'
+import RestaurantDetailsScreen from '../screens/Restaurants/RestaurantDetails'
+import RestaurantReviewsScreen from '../screens/Restaurants/RestaurantReviews'
+
+const RestaurantsScreenStack = createStackNavigator({
+  Restaurants: {
+    screen: RestaurantsScreen,
     navigationOptions: ({ navigation }) => ({
       title: 'Home'
     })
+  },
+  AddNewRestaurants: {
+    screen: AddNewRestaurantsScreen,
+    navigationOptions: ({ navigation }) => ({
+      title: 'New Restaurants'
+    })
+  },
+  RestaurantDetails: {
+    screen: RestaurantDetailsScreen,
+    navigationOptions: ({ navigation }) => (
+
+      {
+        title: navigation.state.params.restaurants.item.restaurant.name
+      }
+    )
+  },
+  RestaurantReviews: {
+    screen: RestaurantReviewsScreen,
+    navigationOptions: ({ navigation }) => (
+
+      {
+        title: navigation.state.params.name
+      }
+    )
   }
 });
 
@@ -67,8 +95,8 @@ const myAccountScreenStack = createStackNavigator({
 
 const RootStack = createBottomTabNavigator(
   {
-    Home: {
-      screen: homeScreenStack,
+    Restaurants: {
+      screen: RestaurantsScreenStack,
       navigationOptions: ({ navigation }) => ({
         tabBarLabel: 'Home',
         tabBarIcon: ({ tintColor }) => (
@@ -126,6 +154,7 @@ const RootStack = createBottomTabNavigator(
   },
   {
     initialRouteName: "MyAccount",
+    order: ['Restaurants', 'TopFive', 'Search', 'MyAccount'],
     tabBarOptions: {
       inactiveTintColor: "#646464",
       activeTintColor: "#00a680"

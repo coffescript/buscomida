@@ -99,7 +99,7 @@ render(){
   return (
     <View style={styles.viewBody}>
       {/*<Image
-        source={require('../../../assets/buscomida_logo.png')}
+        source={require('../../../assets/img/buscomida_logo.png')}
         style={styles.logo}
         containerStyle={styles.containerLogo}
         PlaceholderContent={<ActivityIndicator />}

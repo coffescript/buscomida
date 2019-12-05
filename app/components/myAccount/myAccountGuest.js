@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { StyleSheet, View, ActivityIndicator } from 'react-native'
 import { Button, Image, Text, Divider } from 'react-native-elements'
 
-const icon = require('../../../assets/myaccountguest.jpg')
+const icon = require('../../../assets/img/myaccountguest.jpg')
 
 export default class AccountGuest extends Component {
 
@@ -16,13 +16,13 @@ render(){
     const { goToScreen } = this.props
   return (
       <View style={styles.viewBody}>
-        {/*<Image 
+        <Image 
           source={icon}
           style={styles.image}
           containerStyle={styles.containerLogo}
           PlaceholderContent={<ActivityIndicator />}
           resizeMode='contain'
-        />*/}
+        />
         <Text style={styles.title}>Consult your profile of Buscomida</Text>
         <Text style={styles.description}>
             ¿Como describirías tu mejor restaurante? Busca y visualiza los mejores

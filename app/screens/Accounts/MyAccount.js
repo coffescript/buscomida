@@ -7,6 +7,7 @@ import * as firebase from 'firebase'
 
 //components
 import AccountGuest from '../../components/myAccount/myAccountGuest'
+import AccountUser from '../../components/myAccount/MyAccountUser'
 
 export default class MyAccount extends Component {
 
@@ -32,7 +33,6 @@ export default class MyAccount extends Component {
   }
   
   goToScreen = (nameScreen) => {
-    console.log(nameScreen)
     this.props.navigation.navigate(nameScreen)
   }
 
@@ -45,16 +45,11 @@ render(){
 
   const { login } = this.state
 
-  if(login){
-    return (
-    <View style={styles.viewBody}>
-      <Text>Are you Logged Successfully</Text>
-      <Button title='Sign out' onPress={() => this.logout()} />
-    </View>
-    )
+  if(!login){
+    return <AccountGuest goToScreen={this.goToScreen} />
   } else{
     return (
-      <AccountGuest goToScreen={this.goToScreen} />
+      <AccountUser />
       )
     }
   }

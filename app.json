@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "buscomida",
-    "slug": "buscomida",
+    "name": "Buscomida",
+    "slug": "Buscomida",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
@@ -14,8 +14,8 @@
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "cover",
+      "backgroundColor": "#00a680"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -25,6 +25,13 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "android": {
+      "package": "com.pixellab.buscomida",
+      "permissions": ["CAMERA_ROLL"]
+    },
+    "packagerOpts": {
+      "nonPersistent": "--nonPersistent"
+}
   }
 }
