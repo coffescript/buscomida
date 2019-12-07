@@ -77,9 +77,9 @@ export default class TopFive extends Component {
       )
     } else {
       return (
-        <View>
+        <View style={styles.chargeTop}>
           <ActivityIndicator size='large' />
-          {/*<Text>Loading Top 5...</Text>*/}
+          <Text>Loading Top 5...</Text>
         </View>
       )
     }
@@ -120,5 +120,8 @@ const styles = StyleSheet.create({
     color: 'grey',
     marginTop: 10,
     textAlign: 'justify'
+  },
+  chargeTop: {
+    alignItems: 'center'
   }
 });
