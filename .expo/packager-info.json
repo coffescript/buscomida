@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 15091,
-  "expoServerNgrokUrl": "https://xq-yzn.dmejia1204.buscomida.exp.direct",
-  "packagerNgrokUrl": "https://packager.xq-yzn.dmejia1204.buscomida.exp.direct",
-  "ngrokPid": 15178,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "webpackServerPort": null
 }

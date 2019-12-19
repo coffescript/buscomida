@@ -4,34 +4,27 @@
     "slug": "Buscomida",
     "privacy": "public",
     "sdkVersion": "35.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "cover",
+      "resizeMode": "contain",
       "backgroundColor": "#00a680"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.pixellab.buscomida",
+      "supportsTablet": false
     },
     "android": {
       "package": "com.pixellab.buscomida",
-      "permissions": ["CAMERA_ROLL"]
+      "permissions": ["CAMERA_ROLL", "LOCATION"]
     },
-    "packagerOpts": {
-      "nonPersistent": "--nonPersistent"
-}
+    "description": ""
   }
 }
