@@ -1,4 +1,4 @@
-import React, { useRef } from "React";
+import React, { useRef } from "react";
 import { StyleSheet, View, ScrollView, Text, Image } from "react-native";
 import { Divider } from "react-native-elements";
 import LoginForm from "../../components/Account/LoginForm";
@@ -12,7 +12,7 @@ export default function Login(props) {
   return (
     <ScrollView>
       <Image
-        source={require("../../../assets/img/5-tenedores-letras-icono-logo.png")}
+        source={require("../../../assets/img/buscomida_logo.png")}
         style={styles.logo}
         resizeMode="contain"
       />
@@ -49,7 +49,8 @@ const styles = StyleSheet.create({
   logo: {
     width: "100%",
     height: 150,
-    marginTop: 20
+    marginTop: 20,
+    marginHorizontal: 10
   },
   viewContainer: {
     marginRight: 40,
@@ -61,11 +62,11 @@ const styles = StyleSheet.create({
     marginRight: 10
   },
   btnRegister: {
-    color: "#00a680",
+    color: "#D01B26",
     fontWeight: "bold"
   },
   divider: {
-    backgroundColor: "#00a680",
+    backgroundColor: "#D01B26",
     margin: 40
   }
 });

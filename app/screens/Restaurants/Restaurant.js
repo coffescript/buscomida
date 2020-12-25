@@ -117,7 +117,7 @@ export default function Restaurant(props) {
           type="material-community"
           name={isFavorite ? "heart" : "heart-outline"}
           onPress={isFavorite ? removeFavorite : addFavorite}
-          color={isFavorite ? "#00a680" : "#000"}
+          color={isFavorite ? "#D01B26" : "#000"}
           size={35}
           underlayColor="transparent"
         />
@@ -203,7 +203,7 @@ function RestaurantInfo(props) {
           leftIcon={{
             name: item.iconName,
             type: item.iconType,
-            color: "#00a680"
+            color: "#D01B26"
           }}
           containerStyle={styles.containerListItem}
         />

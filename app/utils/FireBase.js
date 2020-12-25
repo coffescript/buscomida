@@ -2,14 +2,14 @@ import * as firebase from 'firebase/app'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyA023iAgzhEz3AczlL4S0IqxuquENldURM",
-    authDomain: "buscomida-1d8dd.firebaseapp.com",
-    databaseURL: "https://buscomida-1d8dd.firebaseio.com",
-    projectId: "buscomida-1d8dd",
-    storageBucket: "buscomida-1d8dd.appspot.com",
-    messagingSenderId: "650025153379",
-    appId: "1:650025153379:web:c6809a526da13d53bbd956",
-    measurementId: "G-FG4MYKTW0B"
-  }
+  apiKey: "AIzaSyBzQ7YJAL6suKt7J-iW1t-Dft_M19issKE",
+  authDomain: "buscomida-286406.firebaseapp.com",
+  databaseURL: "https://buscomida-286406.firebaseio.com",
+  projectId: "buscomida-286406",
+  storageBucket: "buscomida-286406.appspot.com",
+  messagingSenderId: "353773555163",
+  appId: "1:353773555163:web:0a251b8c7bea2b7ca6abfe",
+  measurementId: "G-QF74376FBZ"
+};
 
 export const firebaseApp = firebase.initializeApp(firebaseConfig)

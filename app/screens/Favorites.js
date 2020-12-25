@@ -195,7 +195,7 @@ function Restaurant(props) {
         <Icon
           type="material-community"
           name="heart"
-          color="#00a680"
+          color="#D01B26"
           containerStyle={styles.favorite}
           onPress={confirmRemoveFavorite}
           size={40}
@@ -234,7 +234,7 @@ function UserNoLogged(props) {
         title="Ir al login"
         onPress={() => navigation.navigate("Login")}
         containerStyle={{ marginTop: 20, width: "80%" }}
-        buttonStyle={{ backgroundColor: "#00a680" }}
+        buttonStyle={{ backgroundColor: "#D01B26" }}
       />
     </View>
   );

@@ -25,6 +25,7 @@ export default function LoginFacebook(props) {
           navigation.navigate("MyAccount");
         })
         .catch(() => {
+          console.log('[ERROR]', err)
           toastRef.current.show(
             "Error acdediendo con Facebook, intentelo más tarde"
           );

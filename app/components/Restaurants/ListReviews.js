@@ -57,7 +57,7 @@ export default function ListReviews(props) {
           icon={{
             type: "material-community",
             name: "square-edit-outline",
-            color: "#00a680"
+            color: "#D01B26"
           }}
           onPress={() =>
             navigation.navigate("AddReviewRestaurant", {
@@ -69,7 +69,7 @@ export default function ListReviews(props) {
       ) : (
         <View>
           <Text
-            style={{ textAlign: "center", color: "#00a680", padding: 20 }}
+            style={{ textAlign: "center", color: "#D01B26", padding: 20 }}
             onPress={() => navigation.navigate("Login")}
           >
             Para escribir un comentario es necesario estar logeado{" "}
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent"
   },
   btnTitleAddReview: {
-    color: "#00a680"
+    color: "#D01B26"
   },
   viewReview: {
     flexDirection: "row",

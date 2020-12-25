@@ -232,7 +232,7 @@ function FormAdd(props) {
         rightIcon={{
           type: "material-community",
           name: "google-maps",
-          color: locationRestaurant ? "#00a680" : "#c2c2c2",
+          color: locationRestaurant ? "#D01B26" : "#c2c2c2",
           onPress: () => setIsVisibleMap(true)
         }}
         onChange={e => setRestaurantAddress(e.nativeEvent.text)}
@@ -375,7 +375,7 @@ const styles = StyleSheet.create({
     paddingRight: 5
   },
   viewMapBtnSave: {
-    backgroundColor: "#00a680"
+    backgroundColor: "#D01B26"
   },
   viewMapBtnContainerCancel: {
     paddingLeft: 5
@@ -384,7 +384,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#a60d0d"
   },
   btnAddRestaurant: {
-    backgroundColor: "#00a680",
+    backgroundColor: "#D01B26",
     margin: 20
   }
 });
